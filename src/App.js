@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Navbar from "./components/navbar";
+import FocusHeader from "./components/focusheader";
+import Content from "./components/content";
+import CostumerRanking from "./components/costumerRanking";
+import CostumerStories from "./components/costumerStories";
+import Brands from "./components/brands";
+import Footer from "./components/footer";
+import styled from "styled-components";
 
-function App() {
+const Wrapper = styled.div`
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
+`;
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Wrapper>
+      <Navbar />
+      <FocusHeader />
+      <Content />
+      <CostumerRanking />
+      <CostumerStories />
+      <Brands />
+      <Footer />
+    </Wrapper>
   );
-}
+};
 
 export default App;
