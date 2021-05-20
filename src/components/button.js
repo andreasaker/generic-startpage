@@ -2,10 +2,20 @@ import styled from "styled-components";
 
 const Button = styled.button`
   background-color: rgba(0, 0, 0, 0);
-  padding: 0 2em 0 2em;
-  font-weight: bold;
+  display: inline-block;
+  padding: 1em;
+  font-size: 19px;
+  font-weight: normal;
   color: #ffffff;
-  border: 3px solid #ffffff;
+  border: 2px solid #ffffff;
+  width: fit-content;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    border: 2px solid #fdae33;
+    background-color: #fdae33;
+  }
 `;
 
 export default Button;

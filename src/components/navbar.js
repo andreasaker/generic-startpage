@@ -10,7 +10,6 @@ const Nav = styled.nav`
   display: flex;
   align-content: center;
   align-items: center;
-  padding: 0 3vw 0 3vw;
 `;
 
 const Ul = styled.ul`
