@@ -3,17 +3,7 @@ import styled from "styled-components";
 import Button from "./button";
 import doggoImage from "../assets/doggo.jpg";
 import media from "./media";
-
-const Wrapper = styled.div`
-  display: flex;
-  width: 100vw;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  height: 80vh;
-  background-color: #b0b6d0;
-  overflow: hidden;
-`;
+import Wrapper from "./wrapper";
 
 const H1 = styled.h1`
   color: white;
