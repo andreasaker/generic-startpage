@@ -13,14 +13,12 @@ const H2 = styled.h2`
   margin: 2em 0 4em 0;
 `;
 
-const Content = () => {
+const Content = ({ header, steps }) => {
+  console.log(steps);
   return (
     <ContentWrapper>
-      <H2>
-        Reimagine happy dogs with free play-days and their own personal
-        caretaker.
-      </H2>
-      <ThreeSteps />
+      <H2>{header}</H2>
+      <ThreeSteps steps={steps} />
     </ContentWrapper>
   );
 };
