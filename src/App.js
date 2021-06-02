@@ -8,6 +8,7 @@ import Brands from "./components/brands";
 import Footer from "./components/footer";
 import styled from "styled-components";
 import { contentOne, contentTwo } from "./fakeData";
+import SimpleText from "./components/simpleText";
 
 const Wrapper = styled.div`
   display: flex;
@@ -26,11 +27,19 @@ const App = () => {
         caretaker."
         steps={contentOne}
       />
+      <SimpleText
+        header="We guarantee you a 100% happy dog!"
+        text="Free treats included."
+      />
       <Content
-        header="We will take care of your dog and in the mean time learn it new tricks!"
+        header="We will take care of your dog and in the meantime learn it new tricks!"
         steps={contentTwo}
       />
-      <CostumerRanking />
+      <CostumerRanking
+        header="Se how other customers rank us"
+        stars={4}
+        text="sub text"
+      />
       <CostumerStories />
       <Brands />
       <Footer />

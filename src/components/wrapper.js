@@ -8,7 +8,7 @@ const Wrapper = styled.div`
   justify-content: center;
   flex-direction: column;
   height: 80vh;
-  background-color: #b0b6d0;
+  background-color: #ffffff;
   overflow: hidden;
 `;
 
