@@ -36,9 +36,9 @@ const App = () => {
         steps={contentTwo}
       />
       <CostumerRanking
-        header="Se how other customers rank us"
+        header="SEE HOW OTHER COSTUMERS RANK US"
         stars={4}
-        text="sub text"
+        text="4 out of 5 stars from 133 customer reviews"
       />
       <CostumerStories />
       <Brands />
