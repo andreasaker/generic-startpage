@@ -13,10 +13,6 @@ const H2 = styled.h2`
   margin: 2em 0 4em 0;
 `;
 
-const H3 = styled.h3`
-  margin: 2em 0 4em 0;
-`;
-
 const Content = ({ header, steps }) => {
   console.log(steps);
   return (
