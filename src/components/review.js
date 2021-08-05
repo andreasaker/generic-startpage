@@ -4,12 +4,19 @@ import styled from "styled-components";
 const Card = styled.div`
   display: flex;
   flex-direction: row;
-  width: 70em;
+  width: 1130px;
+  flex-shrink: 0;
   height: inherit;
-  background-color: gray;
+  background-color: ${(props) => props.color};
   position: relative;
-  left: ${(props) => props.left};
+  left: ${(props) => `${props.left}px`};
+  transition: all 1s ease;
+
+  &:last-of-type {
+    width: 1400px;
+  }
 `;
+
 //on click move left or right
 //position: relative;
 //left: -64em;
@@ -21,8 +28,8 @@ const Img = styled.img`
 const Box = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 2em 2em 2em 2em;
-  font-size: 28px;
+  padding: 5em 2em 2em 5em;
+  font-size: 20px;
   width: 45%;
 `;
 
@@ -37,16 +44,16 @@ const Canvas = styled.div`
   height: 100%;
 `;
 
-const Review = ({ leftValue, text, subtext, picture }) => {
+const Review = ({ leftValue, text, subtext, picture, picAlt, color }) => {
   return (
-    <Card left={leftValue}>
+    <Card left={leftValue} color={color}>
       <Box>
-        <P>"Our dog always come home with a smile."</P>
-        <div>Melone & Tim</div>
+        <P>{text}</P>
+        <div>{subtext}</div>
       </Box>
 
       <Canvas>
-        <Img src="happy-corgi.jpg" alt="BIld av huoadg5888 från Pixabay" />
+        <Img src={picture} alt={picAlt} />
       </Canvas>
     </Card>
   );

@@ -25,7 +25,7 @@ const P = styled.p`
 const ranking = (amount) => {
   const stars = [];
   for (let i = 0; i < amount; i++) {
-    stars.push(<span>&#11088;</span>);
+    stars.push(<span key={i}>&#11088;</span>);
   }
   return stars;
 };
