@@ -5,6 +5,7 @@ import Content from "./components/content";
 import CostumerRanking from "./components/costumerRanking";
 import CostumerStories from "./components/costumerStories";
 import Brands from "./components/brands";
+import Newsletterform from "./components/newsletterform";
 import Footer from "./components/footer";
 import styled from "styled-components";
 import { data } from "./fakeData";
@@ -41,6 +42,7 @@ const App = () => {
       />
       <CostumerStories reviews={data.reviews} />
       <Brands brands={data.brands} />
+      <Newsletterform />
       <Footer />
     </Wrapper>
   );

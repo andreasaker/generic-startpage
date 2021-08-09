@@ -1,11 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import Wrapper from "./wrapper";
+import media from "./media";
 
 const StyledWrapper = styled(Wrapper)`
   height: 40vh;
-  display: flex;
-  justify-content: center;
 `;
 
 const Board = styled.div`
@@ -14,18 +13,16 @@ const Board = styled.div`
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
-  @media screen and (min-width: 1000px) {
-    width: 700px;
-  }
+  ${media.desktop`width: 700px;`}
 `;
 
 const Img = styled.img`
   height: 50px;
   width: 100px;
-  @media screen and (min-width: 1000px) {
-    height: 100px;
+  ${media.desktop`
+  height: 100px;
     width: 200px;
-  }
+    `}
 `;
 
 /**

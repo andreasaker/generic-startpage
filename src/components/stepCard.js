@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-
+import { H3default } from "./headers";
 const StepCardStyle = styled.div`
   width: 16em;
   height: 16em;
@@ -11,7 +11,7 @@ const StepCardStyle = styled.div`
   text-align: center;
 `;
 
-const H3 = styled.h3`
+const H3 = styled(H3default)`
   margin: 0.7em 0 0 0;
 `;
 
