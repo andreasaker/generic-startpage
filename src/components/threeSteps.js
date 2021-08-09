@@ -8,10 +8,12 @@ const Content = styled.div`
   max-width: 1400px;
   justify-content: space-evenly;
   margin: 2em 0 2em 0;
+  
+}
+
 `;
 
 const ThreeSteps = ({ steps }) => {
-  console.log(steps);
   return (
     <Content>
       {steps.map((e) => {

@@ -7,34 +7,8 @@ import CostumerStories from "./components/costumerStories";
 import Brands from "./components/brands";
 import Footer from "./components/footer";
 import styled from "styled-components";
-import { contentOne, contentTwo } from "./fakeData";
+import { data } from "./fakeData";
 import SimpleText from "./components/simpleText";
-
-const data = {
-  reviews: [
-    {
-      text: "My dog will not leave this place!",
-      subtext: "Tom Havard",
-      picture: "happy-corgi.jpg",
-      picAlt: "BIld av huoadg5888 från Pixabay",
-      color: "#ef5777",
-    },
-    {
-      text: "Dog heaven!",
-      subtext: "Ashly Gorgon",
-      picture: "happy-corgi.jpg",
-      picAlt: "BIld av huoadg5888 från Pixabay",
-      color: "#ffc048",
-    },
-    {
-      text: "This is a company you can trust your dog with.",
-      subtext: "Sally Mostard",
-      picture: "happy-corgi.jpg",
-      picAlt: "BIld av huoadg5888 från Pixabay",
-      color: "#9ce5fd",
-    },
-  ],
-};
 
 const Wrapper = styled.div`
   display: flex;
@@ -43,7 +17,6 @@ const Wrapper = styled.div`
 `;
 
 const App = () => {
-  console.log(contentOne);
   return (
     <Wrapper>
       <Navbar />
@@ -51,7 +24,7 @@ const App = () => {
       <Content
         header="Reimagine happy dogs with free play-days and their own personal
         caretaker."
-        steps={contentOne}
+        steps={data.contentOne}
       />
       <SimpleText
         header="We guarantee you a 100% happy dog!"
@@ -59,7 +32,7 @@ const App = () => {
       />
       <Content
         header="We will take care of your dog and in the meantime learn it new tricks!"
-        steps={contentTwo}
+        steps={data.contentTwo}
       />
       <CostumerRanking
         header="SEE HOW OTHER COSTUMERS RANK US"
@@ -67,7 +40,7 @@ const App = () => {
         text="4 out of 5 stars from 133 customer reviews"
       />
       <CostumerStories reviews={data.reviews} />
-      <Brands />
+      <Brands brands={data.brands} />
       <Footer />
     </Wrapper>
   );
