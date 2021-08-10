@@ -4,7 +4,8 @@ import Wrapper from "./wrapper";
 import media from "./media";
 
 const StyledWrapper = styled(Wrapper)`
-  height: 40vh;
+  height: 25vh;
+  ${media.desktop`height: 40vh;`}
 `;
 
 const Board = styled.div`
