@@ -3,7 +3,7 @@ import media from "./media";
 
 const Wrapper = styled.div`
   display: flex;
-  width: 100vw;
+  width: 100%;
   align-items: center;
   justify-content: center;
   flex-direction: column;
