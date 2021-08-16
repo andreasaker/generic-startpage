@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Wrapper from "./wrapper";
 import Review from "./review";
 import Button from "./button";
+import media from "./media";
 
 const StyledWrapper = styled(Wrapper)`
   height: 40vh;
@@ -15,16 +16,19 @@ const ReviewStack = styled.div`
   align-items: left;
   justify-content: left;
   flex-direction: row;
-  max-width: 1400px;
+  width: 100%;
   height: inherit;
   overflow: hidden;
+  ${media.desktop`
+  max-width: 1400px;
+  `}
 `;
 
 const NextButton = styled(Button)`
   color: #cfcfcf;
   position: absolute;
   background-color: #ffffff;
-  margin: 220px 0 0 1350px;
+  margin: 220px 0 0 500px;
   font-size: 2em;
   padding: 0.3em 0.5em 0.35em 0.5em;
   z-index: 2;
@@ -32,6 +36,9 @@ const NextButton = styled(Button)`
   &:hover {
     color: #ffffff;
   }
+  ${media.desktop`
+  margin: 220px 0 0 1350px;
+  `}
 `;
 
 const PrevButton = styled(NextButton)`

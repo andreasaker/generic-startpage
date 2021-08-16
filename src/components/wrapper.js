@@ -7,9 +7,16 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 80vh;
+  max-height: 40vh;
   background-color: #ffffff;
   overflow: hidden;
+
+  ${media.tablet`
+  max-height: 60vh;
+  `}
+  ${media.desktop`
+  max-height: 80vh;
+  `}
 `;
 
 export default Wrapper;

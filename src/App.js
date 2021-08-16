@@ -13,7 +13,7 @@ import SimpleText from "./components/simpleText";
 
 const Wrapper = styled.div`
   display: flex;
-  width: 100%;
+  width: 100vw;
   flex-direction: column;
 `;
 
