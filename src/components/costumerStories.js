@@ -28,7 +28,7 @@ const NextButton = styled(Button)`
   color: #cfcfcf;
   position: absolute;
   background-color: #ffffff;
-  margin: 220px 0 0 500px;
+  margin: 220px 0 0 0px;
   font-size: 2em;
   padding: 0.3em 0.5em 0.35em 0.5em;
   z-index: 2;
