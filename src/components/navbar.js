@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Logo from "./logo";
 import media from "./media";
 import Link from "./link";
+import { Hamburger, Cross } from "./hamburgerButton";
 
 const Nav = styled.nav`
   width: 100%;
@@ -12,11 +13,12 @@ const Nav = styled.nav`
   display: flex;
   align-content: center;
   align-items: center;
+  ${media.desktop`
+  
+  `}
 `;
 
 const Menu = styled.div`
-  //display: ${(props) => (props.open ? "block" : "none")};
-  //opacity: ${(props) => (props.open ? 1 : 0)};
   width: 100%;
   height: 100%;
   background-color: #ffffff;
@@ -24,22 +26,20 @@ const Menu = styled.div`
   position: fixed;
   top: 0;
   padding: 8em 0 0 0;
-  transition: ease 0.4s opacity;
+  opacity: ${(props) => (props.open ? 1 : 0)};
+  transition: ease-in-out 0.3s opacity;
 
-  animation-name: fademenu;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
-
-  animation-direction: ${(props) => (props.open ? "normal" : "reverse")};
-  @keyframes fademenu {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  ${media.desktop`background-color: #fff0;`}
+  ${media.desktop`
+  padding: 0;
+  position: relative;
+  height: auto;
+  opacity: 1;
+  background-color: #fff0;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
+  `}
 `;
 
 const Ul = styled.ul`
@@ -66,96 +66,10 @@ const Li = styled.li`
   text-align: center;
   margin: 0.5em 0 0.5em 0;
   ${media.desktop`
+  width: auto;
+  text-align: left;
   margin: 0 1em 0 1em;
   `}
-`;
-
-const Hamburger = styled.button`
-  height: 4.2em;
-  width: 4.2em;
-  z-index: 4;
-  display: block;
-  background-color: #fff0;
-  border: 0;
-  position: fixed;
-  top: 0;
-  right: 0;
-  margin: 1em;
-  cursor: pointer;
-  span {
-    display: block;
-    height: 5px;
-    width: 100%;
-    margin: 0px 0 4px 0;
-    background-color: #a4a4a4;
-    position: relative;
-  }
-  span:nth-child(1) {
-    animation-name: rotateTop;
-    animation-duration: 0.4s;
-    animation-fill-mode: forwards;
-    animation-direction: reverse;
-  }
-  span:nth-child(2) {
-    animation-name: rotateMiddle;
-    animation-duration: 0.4s;
-    animation-fill-mode: forwards;
-    animation-direction: reverse;
-  }
-  span:nth-child(3) {
-    animation-name: fade;
-    animation-duration: 0.4s;
-    animation-fill-mode: forwards;
-    animation-direction: reverse;
-  }
-`;
-
-const Cross = styled(Hamburger)`
-  span:nth-child(1) {
-    animation-name: rotateTop;
-    animation-duration: 0.4s;
-    animation-fill-mode: forwards;
-    animation-direction: normal;
-  }
-  span:nth-child(2) {
-    animation-name: rotateMiddle;
-    animation-duration: 0.4s;
-    animation-fill-mode: forwards;
-    animation-direction: normal;
-  }
-  span:nth-child(3) {
-    animation-name: fade;
-    animation-duration: 0.4s;
-    animation-fill-mode: forwards;
-    animation-direction: normal;
-  }
-
-  @keyframes rotateTop {
-    0% {
-      transform: translateY(0) rotate(0deg);
-    }
-    100% {
-      transform: translateY(8px) rotate(47deg);
-      width: 115%;
-    }
-  }
-  @keyframes rotateMiddle {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(-45deg);
-      width: 115%;
-    }
-  }
-  @keyframes fade {
-    0% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
 `;
 
 const Navbar = () => {
@@ -163,6 +77,7 @@ const Navbar = () => {
 
   const handleOpenClose = (e) => {
     e.preventDefault();
+
     setOpen(!open);
   };
 
@@ -195,15 +110,27 @@ const Navbar = () => {
           <Li>
             <Link>Our brands</Link>
           </Li>
-          <Li>Where can i buy</Li>
-          <Li>Costumer stories</Li>
+          <Li>
+            <Link>Where can i buy</Link>
+          </Li>
+          <Li>
+            <Link>Costumer stories</Link>
+          </Li>
         </Ul>
 
         <Ul End>
-          <Li>Blog</Li>
-          <Li>FAQ</Li>
-          <Li>Help</Li>
-          <Li>Sign in</Li>
+          <Li>
+            <Link>Blog</Link>
+          </Li>
+          <Li>
+            <Link>FAQ</Link>
+          </Li>
+          <Li>
+            <Link>Help</Link>
+          </Li>
+          <Li>
+            <Link>Sign in</Link>
+          </Li>
         </Ul>
       </Menu>
     </Nav>
