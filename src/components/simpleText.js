@@ -2,13 +2,20 @@ import React from "react";
 import Wrapper from "./wrapper";
 import styled from "styled-components";
 import { H2default, H3default } from "./headers";
+import media from "./media";
 
 const StyledWrapper = styled(Wrapper)`
   height: 30vh;
 `;
 
 const H2 = styled(H2default)`
-  margin: 2em 0 0 0;
+  margin: 0;
+  font-size: 2em;
+  text-align: center;
+  ${media.desktop`
+  font-size: 1.2em;
+    margin: 2em 0 0 0;
+  `}
 `;
 
 const H3 = styled(H3default)`
