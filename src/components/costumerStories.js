@@ -28,21 +28,32 @@ const NextButton = styled(Button)`
   color: #cfcfcf;
   position: absolute;
   background-color: #ffffff;
-  margin: 220px 0 0 0px;
+  margin: 17vh 0 0 86%;
   font-size: 2em;
-  padding: 0.3em 0.5em 0.35em 0.5em;
-  z-index: 2;
+  padding: 0.1em 0.2em 0.15em 0.2em;
+  z-index: 3;
   box-shadow: 8px 7px 16px #3737376b;
   &:hover {
     color: #ffffff;
   }
+  ${media.tablet`
+  
+  margin: 17vh 0 0 90%;
+  `}
   ${media.desktop`
-  margin: 220px 0 0 1350px;
+  padding: 0.3em 0.5em 0.35em 0.5em;
+  margin: 17vh 0 0 1350px;
   `}
 `;
 
 const PrevButton = styled(NextButton)`
-  margin: 220px 0 0 -20px;
+  margin: 17vh 0 0 2%;
+  ${media.tablet`
+  margin: 17vh 0 0 2%;
+  `}
+  ${media.desktop`
+  margin: 17vh 0 0 -20px;;
+  `}
 `;
 
 /**
@@ -61,16 +72,18 @@ const CostumerStories = ({ reviews }) => {
 
   const handleNextButton = (e) => {
     e.preventDefault();
+    const width = document.getElementById("review-card").clientWidth;
     if (selectedReview !== reviewLength) {
-      setLeftValue(leftvalue - 1130);
+      setLeftValue(leftvalue - width);
       setSelectedReview(selectedReview + 1);
     }
   };
 
   const handlePrevButton = (e) => {
     e.preventDefault();
+    const width = document.getElementById("review-card").clientWidth;
     if (selectedReview !== 1) {
-      setLeftValue(leftvalue + 1130);
+      setLeftValue(leftvalue + width);
       setSelectedReview(selectedReview - 1);
     }
   };
