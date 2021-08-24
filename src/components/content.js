@@ -13,7 +13,11 @@ const ContentWrapper = styled(Wrapper)`
 `;
 
 const H2 = styled(H2default)`
+  margin: 2em 0.5em 1em 0.5em;
+  text-align: center;
+  ${media.desktop`
   margin: 2em 0 4em 0;
+  `}
 `;
 
 const Content = ({ header, steps }) => {

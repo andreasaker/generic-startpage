@@ -1,14 +1,27 @@
 import React from "react";
 import styled from "styled-components";
 import { H3default } from "./headers";
+import media from "./media";
+
 const StepCardStyle = styled.div`
   width: 16em;
-  height: 16em;
+  height: auto;
   display: flex;
   flex-flow: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin: 0 0 1em 0;
+  p {
+    margin: 0.2em 0 0.2em 0;
+  }
+  ${media.desktop`
+  height: 16em;
+  margin: 0;
+  p {
+    margin: 0.5em 0 0.5em 0;
+  }
+  `}
 `;
 
 const H3 = styled(H3default)`
@@ -16,7 +29,8 @@ const H3 = styled(H3default)`
 `;
 
 const Img = styled.img`
-  max-width: 11em;
+  max-width: 7em;
+  ${media.desktop`max-width: 11em;`}
 `;
 
 const Circle = styled.div`

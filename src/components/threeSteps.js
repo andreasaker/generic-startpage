@@ -9,11 +9,10 @@ const Content = styled.div`
   max-width: 1400px;
   flex-wrap: wrap;
   margin: 2em 0 2em 0;
+  justify-content: center;
   ${media.desktop`
   justify-content: space-evenly;
   `}
-}
-
 `;
 
 const ThreeSteps = ({ steps }) => {
