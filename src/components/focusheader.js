@@ -6,10 +6,15 @@ import media from "./media";
 import Wrapper from "./wrapper";
 
 const H1 = styled.h1`
+  font-size: 30px;
   color: white;
-  font-size: 55px;
+  padding: 0.5em;
   margin: 0 0 1em 0;
   position: absolute;
+  ${media.desktop`
+  font-size: 55px;
+  margin: 0 0 1em 0;
+  `}
 `;
 
 const HeaderButton = styled(Button)`
@@ -21,7 +26,7 @@ const HeaderButton = styled(Button)`
 const Image = styled.img`
   height: 100%;
   width: auto;
-  ${media.widescreen`
+  ${media.desktop`
     height: auto;
     width: 100%;
     `}

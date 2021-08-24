@@ -3,11 +3,13 @@ import styled from "styled-components";
 import Wrapper from "./wrapper";
 import ThreeSteps from "./threeSteps";
 import { H2default } from "./headers";
+import media from "./media";
 
 const ContentWrapper = styled(Wrapper)`
-  height: 30em;
+  max-height: 60em;
   background-color: #ffffff;
   padding: 3em 0 5em 0;
+  ${media.desktop`height: 30em;`}
 `;
 
 const H2 = styled(H2default)`
@@ -15,7 +17,6 @@ const H2 = styled(H2default)`
 `;
 
 const Content = ({ header, steps }) => {
-  console.log(steps);
   return (
     <ContentWrapper>
       {header && <H2>{header}</H2>}

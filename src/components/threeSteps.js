@@ -1,14 +1,17 @@
 import React from "react";
 import StepCard from "./stepCard";
 import styled from "styled-components";
+import media from "./media";
 
 const Content = styled.div`
   display: flex;
   width: 100%;
   max-width: 1400px;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
   margin: 2em 0 2em 0;
-  
+  ${media.desktop`
+  justify-content: space-evenly;
+  `}
 }
 
 `;
@@ -17,8 +20,6 @@ const ThreeSteps = ({ steps }) => {
   return (
     <Content>
       {steps.map((e) => {
-        const imgpath = `../assets/${e.img_path}`;
-        console.log(imgpath);
         return (
           <StepCard
             key={e.id}
