@@ -8,8 +8,11 @@ import media from "./media";
 const ContentWrapper = styled(Wrapper)`
   max-height: 60em;
   background-color: #ffffff;
-  padding: 3em 0 5em 0;
-  ${media.desktop`height: 30em;`}
+  padding: 3em 0 4em 0;
+  ${media.desktop`
+    height: 30em;
+    padding: 3em 0 5em 0;
+  `}
 `;
 
 const H2 = styled(H2default)`

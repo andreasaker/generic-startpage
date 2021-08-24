@@ -1,20 +1,28 @@
 import React from "react";
 import Wrapper from "./wrapper";
 import styled from "styled-components";
+import media from "./media";
 
 const StyledWrapper = styled(Wrapper)`
   height: 35vh;
 `;
 
 const H2 = styled.h2`
+  margin: 0;
+  font-size: 1em;
+  ${media.desktop`
   margin: 3em 0 0 0;
-  font-size: 2em;
+    font-size: 2em;
+  `}
 `;
 
 const H3 = styled.h3`
   margin: 0 0 1em 0;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 0.7em;
+  ${media.desktop`
+    font-size: 16px;
+  `}
 `;
 
 const P = styled.p`
