@@ -24,8 +24,12 @@ const HeaderButton = styled(Button)`
 `;
 
 const Image = styled.img`
+  max-height: 40vh;
   height: 100%;
   width: auto;
+  ${media.tablet`
+  max-height: 100%;
+    `}
   ${media.desktop`
     height: auto;
     width: 100%;
