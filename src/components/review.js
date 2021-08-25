@@ -12,22 +12,25 @@ const Card = styled.div`
   position: relative;
   left: ${(props) => `${props.left}px`};
   transition: all 1s ease;
+  &:last-of-type {
+    width: 100%;
+  }
 
   ${media.tablet`
-  width: 768px;
-  &:last-of-type {
     width: 768px;
-  }
+    &:last-of-type {
+      width: 100%;
+    }
   `}
 
   ${media.desktop`
   width: 1130px;
-  &:last-of-type {
-    width: 1400px;
-    img{
-      width: 100%;
+    &:last-of-type {
+      width: 1400px;
+      img{
+        width: 100%;
+      }
     }
-  }
   `}
 `;
 

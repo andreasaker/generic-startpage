@@ -3,9 +3,11 @@ import Wrapper from "./wrapper";
 import media from "./media";
 import styled from "styled-components";
 import Logo from "./logo";
+import Link from "./link";
 
 const StyledWrapper = styled(Wrapper)`
-  height: 30vh;
+  max-height: 60em;
+  height: 40em;
   background-color: #485460;
   display: flex;
   flex-direction: row;
@@ -16,31 +18,47 @@ const StyledWrapper = styled(Wrapper)`
   `}
 `;
 
+const SLink = styled(Link)`
+  color: #d2dae2;
+  text-decoration: none;
+`;
+
 const SecondWrapper = styled.div`
+  max-width: 1250px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   width: inherit;
+  padding: 0 3em 0 3em;
+  ${media.desktop`
   padding: 0 14em 0 14em;
+  `}
 `;
 
 const LogoBar = styled.div`
   width: 100%;
+  max-width: 1400px;
+  padding: 0 1em 0 1em;
+  ${media.desktop`
   padding: 0 3em 0 3em;
+  `}
 `;
 const Menu = styled.nav`
   width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin: 0 0 2em 0;
   ul {
     width: 100%;
     list-style: none;
     padding: 0;
     margin: 0;
   }
+
   ${media.desktop`
   width: 70%;
+  margin: 0;
   ul {
     width: 50%;
   }
@@ -51,8 +69,9 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  text-align: right;
+  text-align: left;
   ${media.desktop`
+  text-align: right;
   width: 30%;
   `}
 `;
@@ -61,21 +80,30 @@ const Contact = styled.div`
 `;
 const Social = styled.div`
   width: 100%;
+  display: flex;
+  justify-content: center;
+  ${media.desktop`
+  justify-content: end;
+  `}
 `;
 
 const SocialImg = styled.img`
   width: 2.5em;
   margin: 2em 12px 0 12px;
+  cursor: pointer;
 `;
 
 const Disclaimer = styled.div`
   font-size: 12px;
+  margin: 1em;
+  text-align: center;
   a {
     color: #8097ae;
-    margin: 0 7px 0 7px;
+    margin: 0 14px 0 0;
   }
   ${media.desktop`
-  
+  margin: 0;
+  text-align: left;
   `}
 `;
 
@@ -88,19 +116,38 @@ const Footer = () => {
       <SecondWrapper>
         <Menu>
           <ul>
-            <li>Our brands</li>
-            <li>Where can i buy</li>
-            <li>Costumer stories</li>
+            <li>
+              <SLink>Our brands</SLink>
+            </li>
+            <li>
+              <SLink>Where can i buy</SLink>
+            </li>
+            <li>
+              <SLink>Costumer stories</SLink>
+            </li>
           </ul>
           <ul>
-            <li>Blog</li>
-            <li>FAQ</li>
-            <li>Help</li>
-            <li>Sign in</li>
+            <li>
+              <SLink>Blog</SLink>
+            </li>
+            <li>
+              <SLink>FAQ</SLink>
+            </li>
+            <li>
+              <SLink>Help</SLink>
+            </li>
+            <li>
+              <SLink>Sign in</SLink>
+            </li>
           </ul>
         </Menu>
         <Container>
-          <Contact>077-777 77 77 info@doggobrand.io</Contact>
+          <Contact>
+            <SLink href="tel:">077-777 77 77</SLink>
+          </Contact>
+          <Contact>
+            <SLink href="mailto: info@doggobrand.io">info@doggobrand.io</SLink>
+          </Contact>
           <Social>
             <SocialImg src="facebook_logo.png" />
             <SocialImg src="instagram_logo.png" />
@@ -112,6 +159,9 @@ const Footer = () => {
       <Disclaimer>
         <a href="https://github.com/andreasaker">
           Site created by Andreas Åker
+        </a>
+        <a href="http://www.goodweb.design/sites/Enjoy">
+          Site inspired by Enjoy
         </a>
         <a href="https://www.freepik.com/vectors/education">
           Vector created by pch.vector

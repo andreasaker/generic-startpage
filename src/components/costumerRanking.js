@@ -11,7 +11,7 @@ const H2 = styled.h2`
   margin: 0;
   font-size: 1em;
   ${media.desktop`
-  margin: 3em 0 0 0;
+  margin: 1em 0 0 0;
     font-size: 2em;
   `}
 `;
