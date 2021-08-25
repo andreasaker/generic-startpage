@@ -31,7 +31,7 @@ const Image = styled.img`
   height: 100%;
   width: auto;
   ${media.tablet`
-  max-height: 100%;
+  max-height: none;
     `}
   ${media.desktop`
     height: auto;
