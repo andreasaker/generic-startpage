@@ -19,15 +19,19 @@ const Nav = styled.nav`
 `;
 
 const Menu = styled.div`
-  width: 100%;
-  height: 100%;
+  width: ${(props) => (props.open ? "100%" : "0")};
+  height: ${(props) => (props.open ? "100%" : "0")};
+  overflow: hidden;
   background-color: #ffffff;
   z-index: 3;
   position: fixed;
   top: 0;
   padding: 8em 0 0 0;
   opacity: ${(props) => (props.open ? 1 : 0)};
-  transition: ease-in-out 0.3s opacity;
+  transition: ${(props) =>
+    props.open
+      ? "opacity 0.3s ease-in-out, height 0s ease-in-out, width 0s ease-in-out"
+      : "opacity 0.3s ease-in-out, height 0s ease-in-out 0.3s, width 0s ease-in-out 0.3s"};
 
   ${media.desktop`
   padding: 0;
@@ -105,7 +109,7 @@ const Navbar = () => {
     <Nav>
       <Logo />
       <HamburgerState />
-      <Menu open={open}>
+      <Menu open={open} id="nav-menu">
         <Ul>
           <Li>
             <Link>Our brands</Link>

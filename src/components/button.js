@@ -9,7 +9,7 @@ const Button = styled.button`
   color: #ffffff;
   border: 2px solid #ffffff;
   width: fit-content;
-  height: min-content;
+  height: auto;
   cursor: pointer;
   transition: all 0.2s ease;
 
