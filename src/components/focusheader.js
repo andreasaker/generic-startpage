@@ -9,7 +9,7 @@ const H1 = styled.h1`
   font-size: 30px;
   color: white;
   padding: 0.5em;
-  margin: 0 0 2em 0;
+  margin: 0 0 25% 0;
   position: absolute;
   ${media.desktop`
   font-size: 55px;
@@ -19,7 +19,7 @@ const H1 = styled.h1`
 
 const HeaderButton = styled(Button)`
   position: absolute;
-  margin: 7em 0 0 0;
+  margin: 25% 0 0 0;
   border-width: 4px;
   ${media.desktop`
   margin: 9em 0 0 0;

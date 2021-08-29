@@ -34,6 +34,8 @@ const Menu = styled.div`
       : "opacity 0.3s ease-in-out, height 0s ease-in-out 0.3s, width 0s ease-in-out 0.3s"};
 
   ${media.desktop`
+  width: 100%;
+  height: 100%;
   padding: 0;
   position: relative;
   height: auto;
