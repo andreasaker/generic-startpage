@@ -25,35 +25,52 @@ const ReviewStack = styled.div`
 `;
 
 const NextButton = styled(Button)`
-  font-family: "Zapf Dingbats";
   color: #cfcfcf;
   position: absolute;
   background-color: #ffffff;
   margin: 17vh 0 0 86%;
   font-size: 2em;
-  padding: 0.1em 0.2em 0.15em 0.2em;
+  padding: 0.3em 0.2em 0.3em 0.2em;
   z-index: 1;
   box-shadow: 8px 7px 16px #3737376b;
   &:hover {
     color: #ffffff;
   }
   ${media.tablet`
-  
-  margin: 17vh 0 0 90%;
+  margin: 17vh 0 0 94%;
   `}
   ${media.desktop`
-  padding: 0.3em 0.5em 0.35em 0.5em;
-  margin: 17vh 0 0 1350px;
+  padding: 0.6em 0.5em 0.6em 0.5em;
+  margin: 17vh 0 0 1360px;
   `}
 `;
 
 const PrevButton = styled(NextButton)`
   margin: 17vh 0 0 2%;
   ${media.tablet`
-  margin: 17vh 0 0 2%;
+  margin: 17vh 0 0 1.3%;
   `}
   ${media.desktop`
   margin: 17vh 0 0 -20px;;
+  `}
+`;
+
+const ArrowLeft = styled.div`
+  width: 0;
+  height: 0;
+  border-top: 12px solid transparent;
+  border-right: 20px solid;
+  border-bottom: 12px solid transparent;
+`;
+
+const ArrowRight = styled.div`
+  width: 0;
+  height: 0;
+  border-top: 12px solid transparent;
+  border-left: 20px solid;
+  border-bottom: 12px solid transparent;
+  ${media.desktop`
+ 
   `}
 `;
 
@@ -96,7 +113,9 @@ const CostumerStories = ({ reviews }) => {
   return (
     <StyledWrapper>
       <ReviewStack>
-        <PrevButton onClick={(e) => handlePrevButton(e)}>⮜</PrevButton>
+        <PrevButton onClick={(e) => handlePrevButton(e)}>
+          <ArrowLeft />
+        </PrevButton>
         {reviews.map((r, i) => {
           return (
             <Review
@@ -111,7 +130,9 @@ const CostumerStories = ({ reviews }) => {
           );
         })}
 
-        <NextButton onClick={(e) => handleNextButton(e)}>⮞</NextButton>
+        <NextButton onClick={(e) => handleNextButton(e)}>
+          <ArrowRight />
+        </NextButton>
       </ReviewStack>
     </StyledWrapper>
   );

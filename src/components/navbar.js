@@ -13,6 +13,7 @@ const Nav = styled.nav`
   display: flex;
   align-content: center;
   align-items: center;
+
   ${media.desktop`
   
   `}

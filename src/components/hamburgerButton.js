@@ -10,8 +10,8 @@ import media from "./media";
 */
 
 export const Hamburger = styled.button`
-  height: 4.2em;
-  width: 4.2em;
+  height: 50px;
+  width: 50px;
   z-index: 4;
   display: block;
   background-color: #fff0;
@@ -23,9 +23,9 @@ export const Hamburger = styled.button`
   cursor: pointer;
   span {
     display: block;
-    height: 5px;
+    height: 4px;
     width: 100%;
-    margin: 0px 0 4px 0;
+    margin: 0px 0 6px 0;
     background-color: #a4a4a4;
     position: relative;
   }
@@ -75,8 +75,8 @@ export const Cross = styled(Hamburger)`
       transform: translateY(0) rotate(0deg);
     }
     100% {
-      transform: translateY(8px) rotate(47deg);
-      width: 115%;
+      transform: translateY(10px) rotate(47deg);
+      //width: 120%;
     }
   }
   @keyframes rotateMiddle {
@@ -85,7 +85,7 @@ export const Cross = styled(Hamburger)`
     }
     100% {
       transform: rotate(-45deg);
-      width: 115%;
+      //width: 120%;
     }
   }
   @keyframes fade {
