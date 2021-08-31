@@ -7,7 +7,6 @@ import media from "./media";
 import Button from "./button";
 
 const StyledWrapper = styled(Wrapper)`
-  z-index: 3;
   height: 30em;
 `;
 

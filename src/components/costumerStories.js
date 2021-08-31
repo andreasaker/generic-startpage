@@ -25,13 +25,14 @@ const ReviewStack = styled.div`
 `;
 
 const NextButton = styled(Button)`
+  font-family: "Zapf Dingbats";
   color: #cfcfcf;
   position: absolute;
   background-color: #ffffff;
   margin: 17vh 0 0 86%;
   font-size: 2em;
   padding: 0.1em 0.2em 0.15em 0.2em;
-  z-index: 3;
+  z-index: 1;
   box-shadow: 8px 7px 16px #3737376b;
   &:hover {
     color: #ffffff;
