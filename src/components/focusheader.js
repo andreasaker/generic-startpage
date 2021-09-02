@@ -6,7 +6,7 @@ import media from "./media";
 import Wrapper from "./wrapper";
 
 const StyledWrapper = styled(Wrapper)`
-  margin: 5em 0 0 0;
+  margin: 4em 0 0 0;
   ${media.desktop`
   margin: 0;
   `}

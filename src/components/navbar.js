@@ -8,7 +8,7 @@ import { Hamburger, Cross } from "./hamburgerButton";
 const Nav = styled.nav`
   width: 100%;
   box-sizing: content-box;
-  height: 5em;
+  height: 4em;
   background-color: #ffffff;
   display: flex;
   align-content: center;
