@@ -10,8 +10,8 @@ import media from "./media";
 */
 
 export const Hamburger = styled.button`
-  height: 50px;
-  width: 50px;
+  height: 4em;
+  width: 4em;
   z-index: 4;
   display: block;
   background-color: #fff0;
@@ -25,7 +25,7 @@ export const Hamburger = styled.button`
     display: block;
     height: 4px;
     width: 100%;
-    margin: 0px 0 6px 0;
+    margin: 6px 0 6px 0;
     background-color: #a4a4a4;
     position: relative;
   }
