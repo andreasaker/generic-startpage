@@ -21,6 +21,7 @@ const Wrapper = styled.div`
 const App = () => {
   return (
     <Wrapper>
+      <a id="start"></a>
       <Navbar />
       <FocusHeader />
       <Content

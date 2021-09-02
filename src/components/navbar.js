@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import Logo from "./logo";
 import media from "./media";
-import Link from "./link";
+import LinkButton from "./linkButton";
 import { Hamburger, Cross } from "./hamburgerButton";
 
 const Nav = styled.nav`
@@ -16,10 +16,12 @@ const Nav = styled.nav`
   position: fixed;
   z-index: 3;
   box-shadow: 0px 1px 4px #a4a4a4;
+  font-size: 16px;
   ${media.desktop`
   height: 5em;
   position: relative;
   box-shadow: none;
+  font-size: 16px;
   `}
 `;
 
@@ -75,7 +77,7 @@ const Ul = styled.ul`
 const Li = styled.li`
   width: 100%;
   text-align: center;
-  margin: 0.5em 0 0.5em 0;
+  margin: 0.2em 0 0.2em 0;
   ${media.desktop`
   width: auto;
   text-align: left;
@@ -87,8 +89,9 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   const handleOpenClose = (e) => {
-    e.preventDefault();
-
+    if (e) {
+      e.preventDefault();
+    }
     setOpen(!open);
   };
 
@@ -114,33 +117,47 @@ const Navbar = () => {
 
   return (
     <Nav>
-      <Logo />
+      <a href="#start">
+        <Logo />
+      </a>
       <HamburgerState />
       <Menu open={open} id="nav-menu">
         <Ul>
           <Li>
-            <Link href="#brands">Our brands</Link>
+            <a href="#brands">
+              <LinkButton onClick={() => handleOpenClose()}>
+                Our brands
+              </LinkButton>
+            </a>
           </Li>
           <Li>
-            <Link href="#expect">What can i expect</Link>
+            <a href="#expect">
+              <LinkButton onClick={() => handleOpenClose()}>
+                What can i expect
+              </LinkButton>
+            </a>
           </Li>
           <Li>
-            <Link href="#stories">Costumer stories</Link>
+            <a href="#stories">
+              <LinkButton onClick={() => handleOpenClose()}>
+                Costumer stories
+              </LinkButton>
+            </a>
           </Li>
         </Ul>
 
         <Ul End>
           <Li>
-            <Link>Blog</Link>
+            <LinkButton>Blog</LinkButton>
           </Li>
           <Li>
-            <Link>FAQ</Link>
+            <LinkButton>FAQ</LinkButton>
           </Li>
           <Li>
-            <Link>Help</Link>
+            <LinkButton>Help</LinkButton>
           </Li>
           <Li>
-            <Link>Sign in</Link>
+            <LinkButton>Sign in</LinkButton>
           </Li>
         </Ul>
       </Menu>
