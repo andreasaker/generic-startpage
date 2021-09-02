@@ -38,7 +38,7 @@ const SecondWrapper = styled.div`
 const LogoBar = styled.div`
   width: 100%;
   max-width: 1400px;
-  padding: 0 1em 0 1em;
+  padding: 0 1em 0 1.7em;
   ${media.desktop`
   padding: 0 3em 0 3em;
   `}
