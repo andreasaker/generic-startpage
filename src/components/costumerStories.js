@@ -9,6 +9,10 @@ const StyledWrapper = styled(Wrapper)`
   height: 40vh;
   display: flex;
   justify-content: center;
+  a {
+    margin-top: -5em;
+    padding-top: 5em;
+  }
 `;
 
 const ReviewStack = styled.div`
@@ -83,7 +87,7 @@ const ArrowRight = styled.div`
  * @param {*} color
  * @returns review component for every object
  */
-const CostumerStories = ({ reviews }) => {
+const CostumerStories = ({ id, reviews }) => {
   const [leftvalue, setLeftValue] = useState(0);
   const [reviewLength, setReviewLength] = useState(reviews.length);
   const [selectedReview, setSelectedReview] = useState(1);
@@ -112,6 +116,7 @@ const CostumerStories = ({ reviews }) => {
 
   return (
     <StyledWrapper>
+      <a id={id}></a>
       <ReviewStack>
         <PrevButton onClick={(e) => handlePrevButton(e)}>
           <ArrowLeft />

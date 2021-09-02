@@ -9,6 +9,10 @@ const ContentWrapper = styled(Wrapper)`
   max-height: 60em;
   background-color: #ffffff;
   padding: 3em 0 4em 0;
+  a {
+    margin-top: -5em;
+    padding-top: 5em;
+  }
   ${media.desktop`
     height: 30em;
     padding: 3em 0 5em 0;
@@ -23,9 +27,10 @@ const H2 = styled(H2default)`
   `}
 `;
 
-const Content = ({ header, steps }) => {
+const Content = ({ id, header, steps }) => {
   return (
     <ContentWrapper>
+      <a id={id}></a>
       {header && <H2>{header}</H2>}
       {steps && <ThreeSteps steps={steps} />}
     </ContentWrapper>

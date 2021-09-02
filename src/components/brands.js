@@ -5,6 +5,10 @@ import media from "./media";
 
 const StyledWrapper = styled(Wrapper)`
   height: 25vh;
+  a {
+    margin-top: -5em;
+    padding-top: 5em;
+  }
   ${media.desktop`height: 40vh;`}
 `;
 
@@ -31,9 +35,10 @@ const Img = styled.img`
  * @param {{image: string, imageAlt: array}[]} brands array of objects {image, imageAlt}
  * @returns
  */
-const Brands = ({ brands }) => {
+const Brands = ({ id, brands }) => {
   return (
     <StyledWrapper>
+      <a id={id}></a>
       <Board>
         {brands.map((b, i) => {
           return <Img key={i} src={b.image} alt={b.imageAlt} />;

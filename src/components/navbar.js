@@ -119,13 +119,13 @@ const Navbar = () => {
       <Menu open={open} id="nav-menu">
         <Ul>
           <Li>
-            <Link>Our brands</Link>
+            <Link href="#brands">Our brands</Link>
           </Li>
           <Li>
-            <Link>Where can i buy</Link>
+            <Link href="#expect">What can i expect</Link>
           </Li>
           <Li>
-            <Link>Costumer stories</Link>
+            <Link href="#stories">Costumer stories</Link>
           </Li>
         </Ul>
 

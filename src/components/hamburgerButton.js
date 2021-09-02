@@ -19,7 +19,7 @@ export const Hamburger = styled.button`
   position: fixed;
   top: 0;
   right: 0;
-  margin: 1em;
+  margin: 14px;
   cursor: pointer;
   span {
     display: block;

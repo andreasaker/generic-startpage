@@ -33,6 +33,7 @@ const App = () => {
         text="Free treats included."
       />
       <Content
+        id="expect"
         header="We will take care of your dog and in the meantime learn it new tricks!"
         steps={data.contentTwo}
       />
@@ -41,8 +42,8 @@ const App = () => {
         stars={4}
         text="4 out of 5 stars from 133 customer reviews"
       />
-      <CostumerStories reviews={data.reviews} />
-      <Brands brands={data.brands} />
+      <CostumerStories id="stories" reviews={data.reviews} />
+      <Brands id="brands" brands={data.brands} />
       <Newsletterform />
       <Footer />
     </Wrapper>
