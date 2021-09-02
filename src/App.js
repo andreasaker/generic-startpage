@@ -14,6 +14,7 @@ import SimpleText from "./components/simpleText";
 const Wrapper = styled.div`
   display: flex;
   width: 100vw;
+  max-width: 100%;
   flex-direction: column;
 `;
 

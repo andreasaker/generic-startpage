@@ -5,6 +5,13 @@ import doggoImage from "../assets/doggo.jpg";
 import media from "./media";
 import Wrapper from "./wrapper";
 
+const StyledWrapper = styled(Wrapper)`
+  margin: 5em 0 0 0;
+  ${media.desktop`
+  margin: 0;
+  `}
+`;
+
 const H1 = styled.h1`
   font-size: 30px;
   color: white;
@@ -41,14 +48,14 @@ const Image = styled.img`
 
 const FocusHeader = () => {
   return (
-    <Wrapper>
+    <StyledWrapper>
       <H1>Welcome to a new kind of experience.</H1>
       <HeaderButton>See how we can help you</HeaderButton>
       <Image
         alt="Happy dog on street - picture captured by Pexels"
         src={doggoImage}
       />
-    </Wrapper>
+    </StyledWrapper>
   );
 };
 

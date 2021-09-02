@@ -9,6 +9,7 @@ body {
   color: #1e272e;
   display: flex;
   justify-content: center;
+  overflow-x: hidden;
 }
 
 code {

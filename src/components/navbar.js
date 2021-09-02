@@ -13,9 +13,12 @@ const Nav = styled.nav`
   display: flex;
   align-content: center;
   align-items: center;
-
+  position: fixed;
+  z-index: 3;
+  box-shadow: 0px 1px 4px #a4a4a4;
   ${media.desktop`
-  
+  position: relative;
+  box-shadow: none;
   `}
 `;
 
