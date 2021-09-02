@@ -17,6 +17,7 @@ const Nav = styled.nav`
   z-index: 3;
   box-shadow: 0px 1px 4px #a4a4a4;
   ${media.desktop`
+  height: 5em;
   position: relative;
   box-shadow: none;
   `}
