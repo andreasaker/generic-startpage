@@ -35,8 +35,8 @@ const Brands = ({ brands }) => {
   return (
     <StyledWrapper>
       <Board>
-        {brands.map((b) => {
-          return <Img src={b.image} alt={b.imageAlt} />;
+        {brands.map((b, i) => {
+          return <Img key={i} src={b.image} alt={b.imageAlt} />;
         })}
       </Board>
     </StyledWrapper>
