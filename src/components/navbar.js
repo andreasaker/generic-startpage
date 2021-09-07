@@ -88,7 +88,7 @@ const Li = styled.li`
   `}
 `;
 
-const Navbar = () => {
+const Navbar = ({ anchorButtons }) => {
   const [open, setOpen] = useState(false);
 
   const handleOpenClose = (e) => {
@@ -118,6 +118,19 @@ const Navbar = () => {
     }
   };
 
+  const VariableButtons = () => {
+    const listItems = anchorButtons.map((b, i) => {
+      return (
+        <Li key={i}>
+          <a href={`#${b.id}`}>
+            <LinkButton onClick={() => handleOpenClose()}>{b.name}</LinkButton>
+          </a>
+        </Li>
+      );
+    });
+    return <Ul>{listItems}</Ul>;
+  };
+
   return (
     <Nav>
       <a href="#start">
@@ -125,29 +138,7 @@ const Navbar = () => {
       </a>
       <HamburgerState />
       <Menu open={open} id="nav-menu">
-        <Ul>
-          <Li>
-            <a href="#brands">
-              <LinkButton onClick={() => handleOpenClose()}>
-                Our brands
-              </LinkButton>
-            </a>
-          </Li>
-          <Li>
-            <a href="#expect">
-              <LinkButton onClick={() => handleOpenClose()}>
-                What can i expect
-              </LinkButton>
-            </a>
-          </Li>
-          <Li>
-            <a href="#stories">
-              <LinkButton onClick={() => handleOpenClose()}>
-                Costumer stories
-              </LinkButton>
-            </a>
-          </Li>
-        </Ul>
+        <VariableButtons />
 
         <Ul End>
           <Li>

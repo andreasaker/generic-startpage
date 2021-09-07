@@ -22,7 +22,7 @@ const StartPage = ({ data }) => {
       <a id="start" href="/">
         {" "}
       </a>
-      <Navbar />
+      <Navbar anchorButtons={data.anchorButtons} />
       <FocusHeader />
       <Content
         header="Reimagine happy dogs with free play-days and their own personal

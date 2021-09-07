@@ -1,4 +1,9 @@
 export const data = {
+  anchorButtons: [
+    { id: "expect", name: "What can i expect" },
+    { id: "brands", name: "Our brands" },
+    { id: "stories", name: "Costumer stories" },
+  ],
   contentOne: [
     {
       id: 1,
