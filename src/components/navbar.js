@@ -18,6 +18,9 @@ const Nav = styled.nav`
   box-shadow: 0px 1px 4px #a4a4a4;
   font-size: 16px;
   ${media.desktop`
+  max-width: 1600px;
+  margin-left: auto;
+margin-right: auto;
   height: 5em;
   position: relative;
   box-shadow: none;

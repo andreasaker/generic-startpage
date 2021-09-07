@@ -21,6 +21,7 @@ const H1 = styled.h1`
   position: absolute;
   z-index: 1;
   ${media.desktop`
+  padding: 0 16px 7% 16px;
   font-size: 55px;
   margin: 0 0 1em 0;
   `}
@@ -32,7 +33,7 @@ const HeaderButton = styled(Button)`
   border-width: 4px;
   z-index: 1;
   ${media.desktop`
-  margin: 9em 0 0 0;
+  margin: 4em 0 0 0;
   `}
 `;
 
