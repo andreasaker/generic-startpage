@@ -6,7 +6,8 @@ import media from "./media";
 import Wrapper from "./wrapper";
 
 const StyledWrapper = styled(Wrapper)`
-  margin: 4em 0 0 0;
+  margin: 64px 0 0 0;
+  background-color: #000000;
   ${media.desktop`
   margin: 0;
   `}
@@ -14,10 +15,11 @@ const StyledWrapper = styled(Wrapper)`
 
 const H1 = styled.h1`
   font-size: 30px;
+  text-align: center;
   color: white;
-  padding: 0.5em;
-  margin: 0 0 25% 0;
+  padding: 0 16px 30% 16px;
   position: absolute;
+  z-index: 1;
   ${media.desktop`
   font-size: 55px;
   margin: 0 0 1em 0;
@@ -26,23 +28,26 @@ const H1 = styled.h1`
 
 const HeaderButton = styled(Button)`
   position: absolute;
-  margin: 25% 0 0 0;
+  margin-top: 20%;
   border-width: 4px;
+  z-index: 1;
   ${media.desktop`
   margin: 9em 0 0 0;
   `}
 `;
 
 const Image = styled.img`
-  max-height: 40vh;
+  max-height: 330px;
   height: 100%;
   width: auto;
+  opacity: 0.8;
   ${media.tablet`
   max-height: none;
     `}
   ${media.desktop`
     height: auto;
     width: 100%;
+    opacity: 0.9;
     `}
 `;
 
