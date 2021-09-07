@@ -38,7 +38,9 @@ const Img = styled.img`
 const Brands = ({ id, brands }) => {
   return (
     <StyledWrapper>
-      <a id={id}></a>
+      <a id={id} href="/">
+        {" "}
+      </a>
       <Board>
         {brands.map((b, i) => {
           return <Img key={i} src={b.image} alt={b.imageAlt} />;

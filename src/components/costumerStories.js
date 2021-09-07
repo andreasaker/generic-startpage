@@ -116,7 +116,9 @@ const CostumerStories = ({ id, reviews }) => {
 
   return (
     <StyledWrapper>
-      <a id={id}></a>
+      <a id={id} href="/">
+        {" "}
+      </a>
       <ReviewStack>
         <PrevButton onClick={(e) => handlePrevButton(e)}>
           <ArrowLeft />

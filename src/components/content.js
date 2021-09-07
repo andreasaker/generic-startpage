@@ -30,7 +30,9 @@ const H2 = styled(H2default)`
 const Content = ({ id, header, steps }) => {
   return (
     <ContentWrapper>
-      <a id={id}></a>
+      <a id={id} href="/">
+        {" "}
+      </a>
       {header && <H2>{header}</H2>}
       {steps && <ThreeSteps steps={steps} />}
     </ContentWrapper>

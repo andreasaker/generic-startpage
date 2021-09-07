@@ -21,7 +21,9 @@ const Wrapper = styled.div`
 const App = () => {
   return (
     <Wrapper>
-      <a id="start"></a>
+      <a id="start" href="/">
+        {" "}
+      </a>
       <Navbar />
       <FocusHeader />
       <Content
