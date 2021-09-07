@@ -4,18 +4,20 @@ import { H3default } from "./headers";
 import media from "./media";
 
 const StepCardStyle = styled.div`
-  width: 16em;
+  width: 100%;
   height: auto;
   display: flex;
   flex-flow: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 0 0 1em 0;
+  margin: 0 0 20px 0;
+  padding: 0 16px 0 16px;
   p {
     margin: 0.2em 0 0.2em 0;
   }
   ${media.desktop`
+  width: 16em;
   height: 16em;
   margin: 0;
   p {

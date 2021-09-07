@@ -10,6 +10,7 @@ const StyledWrapper = styled(Wrapper)`
 const H2 = styled.h2`
   margin: 0;
   font-size: 1em;
+  padding: 0 16px 0 16px;
   ${media.desktop`
   margin: 1em 0 0 0;
     font-size: 2em;
