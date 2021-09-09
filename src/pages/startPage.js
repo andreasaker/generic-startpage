@@ -24,27 +24,23 @@ const StartPage = ({ data }) => {
       </a>
       <Navbar anchorButtons={data.anchorButtons} />
       <FocusHeader />
+      <Content header={data.contentOne.header} steps={data.contentOne.steps} />
+      <SimpleText header={data.simpleText.header} text={data.simpleText.text} />
       <Content
-        header="Reimagine happy dogs with free play-days and their own personal
-        caretaker."
-        steps={data.contentOne}
-      />
-      <SimpleText
-        header="We guarantee you a 100% happy dog!"
-        text="Free treats included."
-      />
-      <Content
-        id="expect"
-        header="We will take care of your dog and in the meantime learn it new tricks!"
-        steps={data.contentTwo}
+        id={data.contentTwo.anchorId}
+        header={data.contentTwo.header}
+        steps={data.contentTwo.steps}
       />
       <CostumerRanking
-        header="SEE HOW OTHER COSTUMERS RANK US"
-        stars={4}
-        text="4 out of 5 stars from 133 customer reviews"
+        header={data.costumerRanking.header}
+        stars={data.costumerRanking.stars}
+        text={data.costumerRanking.text}
       />
-      <CostumerStories id="stories" reviews={data.reviews} />
-      <Brands id="brands" brands={data.brands} />
+      <CostumerStories
+        id={data.costumerReviews.anchorId}
+        reviews={data.costumerReviews.reviews}
+      />
+      <Brands id={data.brands.anchorId} brands={data.brands.images} />
       <Newsletterform />
       <Footer />
     </Wrapper>
