@@ -16,14 +16,37 @@ const Wrapper = styled.div`
   flex-direction: column;
 `;
 
-const StartPage = ({ data }) => {
+const Page = ({ data, apiData }) => {
+  const WhatToRender = () => {
+    if (typeof apiData.data !== "undefined") {
+      console.log(apiData.data);
+      // Retunrar bara ett value inte alla i for
+      return apiData.data[0].pagelayout.map((i) => {
+        if (i.__component === "category.header") {
+          return (
+            <p>
+              <FocusHeader header={i} />
+            </p>
+          );
+        }
+        if (i.__component === "category.threesteps") {
+          return <p>{i.title}</p>;
+        }
+      });
+    } else {
+      return <p>loading</p>;
+    }
+  };
+
   return (
     <Wrapper>
       <a id="start" href="/">
         {" "}
       </a>
+
       <Navbar anchorButtons={data.anchorButtons} />
-      <FocusHeader />
+
+      <WhatToRender />
       <Content header={data.contentOne.header} steps={data.contentOne.steps} />
       <SimpleText header={data.simpleText.header} text={data.simpleText.text} />
       <Content
@@ -47,4 +70,4 @@ const StartPage = ({ data }) => {
   );
 };
 
-export default StartPage;
+export default Page;

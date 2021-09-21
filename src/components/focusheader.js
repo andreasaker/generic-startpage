@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import Button from "./button";
-import doggoImage from "../assets/doggo.jpg";
 import media from "./media";
 import Wrapper from "./wrapper";
 
@@ -52,15 +51,13 @@ const Image = styled.img`
     `}
 `;
 
-const FocusHeader = () => {
+const FocusHeader = ({ header }) => {
+  console.log("params:", header);
   return (
     <StyledWrapper>
-      <H1>Welcome to a new kind of experience.</H1>
-      <HeaderButton>See how we can help you</HeaderButton>
-      <Image
-        alt="Happy dog on street - picture captured by Pexels"
-        src={doggoImage}
-      />
+      <H1>{header.title}</H1>
+      <HeaderButton>{header.buttonName}</HeaderButton>
+      <Image alt={header.imgAlt} src={header.imgLink} />
     </StyledWrapper>
   );
 };

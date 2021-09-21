@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./App.css";
-import StartPage from "./pages/startPage";
+import Page from "./pages/page";
 import { data } from "./fakeData";
 
 const App = () => {
@@ -31,14 +31,14 @@ const App = () => {
             Authorization: "Bearer " + token,
           },
         })
-        .then((resp) => setApiData(resp));
+        .then((resp) => setApiData(resp))
+        .catch((err) => console.log(err));
     }
   }, [token]);
 
-  console.log(apiData.data[0]);
   return (
     <div>
-      <StartPage data={data} />
+      <Page data={data} apiData={apiData} loading={loading} />
     </div>
   );
 };

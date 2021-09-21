@@ -4,6 +4,23 @@ export const data = {
     { id: "brands", name: "Our brands" },
     { id: "stories", name: "Costumer stories" },
   ],
+  page: [
+    {
+      id: 1,
+      title: "Startpage",
+      pagelayout: [
+        {
+          id: 1,
+          title: "Welcome to a new kind of experience.",
+          buttonName: "string",
+          imgLink: "string",
+          buttonLink: "string",
+          imgAlt: "string",
+        },
+      ],
+    },
+  ],
+
   contentOne: {
     header:
       "Reimagine happy dogs with free play-days and their own personal caretaker.",
