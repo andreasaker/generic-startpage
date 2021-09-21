@@ -19,18 +19,14 @@ const Wrapper = styled.div`
 const Page = ({ data, apiData }) => {
   const WhatToRender = () => {
     if (typeof apiData.data !== "undefined") {
-      console.log(apiData.data);
+      console.log(apiData);
       // Retunrar bara ett value inte alla i for
       return apiData.data[0].pagelayout.map((i) => {
         if (i.__component === "category.header") {
-          return (
-            <p>
-              <FocusHeader header={i} />
-            </p>
-          );
+          return <FocusHeader key={i.id} header={i} />;
         }
         if (i.__component === "category.threesteps") {
-          return <p>{i.title}</p>;
+          return <Content key={i.id} content={i} />;
         }
       });
     } else {
@@ -47,13 +43,9 @@ const Page = ({ data, apiData }) => {
       <Navbar anchorButtons={data.anchorButtons} />
 
       <WhatToRender />
-      <Content header={data.contentOne.header} steps={data.contentOne.steps} />
+
       <SimpleText header={data.simpleText.header} text={data.simpleText.text} />
-      <Content
-        id={data.contentTwo.anchorId}
-        header={data.contentTwo.header}
-        steps={data.contentTwo.steps}
-      />
+
       <CostumerRanking
         header={data.costumerRanking.header}
         stars={data.costumerRanking.stars}
@@ -71,3 +63,11 @@ const Page = ({ data, apiData }) => {
 };
 
 export default Page;
+
+/*
+<Content
+        id={data.contentTwo.anchorId}
+        header={data.contentTwo.header}
+        steps={data.contentTwo.steps}
+      />
+*/

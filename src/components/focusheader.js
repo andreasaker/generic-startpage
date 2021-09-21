@@ -52,7 +52,6 @@ const Image = styled.img`
 `;
 
 const FocusHeader = ({ header }) => {
-  console.log("params:", header);
   return (
     <StyledWrapper>
       <H1>{header.title}</H1>

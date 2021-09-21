@@ -26,7 +26,7 @@ const App = () => {
   useEffect(() => {
     if (token !== null) {
       axios
-        .get("http://localhost:1337/pages", {
+        .get(`${process.env.REACT_APP_API}/pages`, {
           headers: {
             Authorization: "Bearer " + token,
           },

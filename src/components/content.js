@@ -27,14 +27,14 @@ const H2 = styled(H2default)`
   `}
 `;
 
-const Content = ({ id, header, steps }) => {
+const Content = ({ content }) => {
   return (
     <ContentWrapper>
-      <a id={id} href="/">
+      <a id={content.anchorID} href="/">
         {" "}
       </a>
-      {header && <H2>{header}</H2>}
-      {steps && <ThreeSteps steps={steps} />}
+      <H2>{content.header}</H2>
+      <ThreeSteps steps={content.steps} />
     </ContentWrapper>
   );
 };
