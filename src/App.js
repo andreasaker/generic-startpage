@@ -8,7 +8,7 @@ const App = () => {
   const [loading, setLoading] = useState(true);
   const [apiData, setApiData] = useState([]);
   const [token, setToken] = useState(null);
-  const [error, setError] = useState(null);
+  //const [error, setError] = useState(null);
 
   useEffect(() => {
     console.log(process.env.REACT_APP_USERNAME);
@@ -21,7 +21,7 @@ const App = () => {
         .then((resp) => setToken(resp.data.jwt))
         .catch((err) => console.log(err));
     }
-  }, []);
+  }, [token]);
 
   useEffect(() => {
     if (token !== null) {
@@ -32,15 +32,20 @@ const App = () => {
           },
         })
         .then((resp) => setApiData(resp))
+        .then(() => setLoading(false))
         .catch((err) => console.log(err));
     }
   }, [token]);
 
-  return (
-    <div>
-      <Page data={data} apiData={apiData} loading={loading} />
-    </div>
-  );
+  if (loading) {
+    return <div>Fetching data from API...</div>;
+  } else {
+    return (
+      <div>
+        <Page data={data} apiData={apiData} loading={loading} />
+      </div>
+    );
+  }
 };
 
 export default App;

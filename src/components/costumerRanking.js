@@ -39,11 +39,11 @@ const ranking = (amount) => {
   return stars;
 };
 
-const CostumerRanking = ({ header, stars, text }) => (
+const CostumerRanking = ({ title, stars, paragraph }) => (
   <StyledWrapper>
-    <H2>{header}</H2>
+    <H2>{title}</H2>
     <P>{ranking(stars)} </P>
-    <H3>{text}</H3>
+    <H3>{paragraph}</H3>
   </StyledWrapper>
 );
 

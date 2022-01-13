@@ -28,9 +28,25 @@ const Page = ({ data, apiData }) => {
         if (i.__component === "category.threesteps") {
           return <Content key={i.id} content={i} />;
         }
+        if (i.__component === "category.simple-text") {
+          return <SimpleText key={i.id} title={i.title} text={i.text} />;
+        }
+        if (i.__component === "category.costumer-ranking") {
+          //Blir fel här, samma ID
+          return (
+            <CostumerRanking
+              key={i.id}
+              title={i.title}
+              stars={i.text}
+              paragraph={i.paragraph}
+            />
+          );
+        } else {
+          return null;
+        }
       });
     } else {
-      return <p>loading</p>;
+      return <p>Found no layout :(</p>;
     }
   };
 
@@ -44,13 +60,6 @@ const Page = ({ data, apiData }) => {
 
       <WhatToRender />
 
-      <SimpleText header={data.simpleText.header} text={data.simpleText.text} />
-
-      <CostumerRanking
-        header={data.costumerRanking.header}
-        stars={data.costumerRanking.stars}
-        text={data.costumerRanking.text}
-      />
       <CostumerStories
         id={data.costumerReviews.anchorId}
         reviews={data.costumerReviews.reviews}

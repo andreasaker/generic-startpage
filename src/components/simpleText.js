@@ -23,9 +23,9 @@ const H3 = styled(H3default)`
   margin: 1em 0 1em 0;
 `;
 
-const SimpleText = ({ header, text }) => (
+const SimpleText = ({ title, text }) => (
   <StyledWrapper>
-    <H2>{header}</H2>
+    <H2>{title}</H2>
     <H3>{text}</H3>
   </StyledWrapper>
 );
