@@ -19,7 +19,7 @@ const Wrapper = styled.div`
 const Page = ({ data, apiData }) => {
   const WhatToRender = () => {
     if (typeof apiData.data !== "undefined") {
-      console.log(apiData);
+      console.log(apiData.data[0].pagelayout);
       // Retunrar bara ett value inte alla i for
       return apiData.data[0].pagelayout.map((i) => {
         if (i.__component === "category.header") {
@@ -30,6 +30,11 @@ const Page = ({ data, apiData }) => {
         }
         if (i.__component === "category.simple-text") {
           return <SimpleText key={i.id} title={i.title} text={i.text} />;
+        }
+        if (i.__component === "category.costumer-stories") {
+          return (
+            <CostumerStories key={i.id} id={i.anchorId} reviews={i.stories} />
+          );
         }
         if (i.__component === "category.costumer-ranking") {
           //Blir fel här, samma ID
@@ -60,10 +65,6 @@ const Page = ({ data, apiData }) => {
 
       <WhatToRender />
 
-      <CostumerStories
-        id={data.costumerReviews.anchorId}
-        reviews={data.costumerReviews.reviews}
-      />
       <Brands id={data.brands.anchorId} brands={data.brands.images} />
       <Newsletterform />
       <Footer />
