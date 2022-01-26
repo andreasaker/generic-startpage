@@ -46,6 +46,9 @@ const Page = ({ data, apiData }) => {
               paragraph={i.paragraph}
             />
           );
+        }
+        if (i.__component === "category.brands") {
+          return <Brands key={i.id} id={i.anchorId} brands={i.images} />;
         } else {
           return null;
         }
@@ -65,7 +68,6 @@ const Page = ({ data, apiData }) => {
 
       <WhatToRender />
 
-      <Brands id={data.brands.anchorId} brands={data.brands.images} />
       <Newsletterform />
       <Footer />
     </Wrapper>
